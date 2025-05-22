@@ -1,0 +1,323 @@
+/*--------------------------------- Estilo gerais ---------------------------------*/
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body > nav {
+    grid-area: nav;
+}
+
+body > section {
+    grid-area: section;
+}	
+
+body > footer {
+    grid-area: footer;
+}
+
+/*------------- Estilo para celulares ou telas menores que 768 pixels -------------*/
+@media (max-width: 768px){
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 5vw;
+        max-width: 100%;
+        line-height: 1.5;
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 10vw;
+        margin-bottom: 0;
+    }
+
+    #menu ul li {
+        margin-bottom: 10px;
+        font-size: 6vw;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    #menu ul li a, footer ul li a {
+        color: white;
+        font-size: 6vw;
+        text-decoration: underline solid rgb(243, 198, 0) 2px;  
+    }
+
+    .icons {
+        width: 6%;
+        height: 6%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 0px 0px 30px 0px;
+        font-size: 6vw;
+        border: none;
+        background-color: #ffcc00;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .button {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    #imagem_pessoal {
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        margin: 25px auto;
+        border: 5px solid rgb(243, 198, 0);
+    }
+
+    .imagem-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: ;
+        gap: 12vw;        
+
+    }
+    
+    #layout img {
+        width: 80%;
+        object-fit: cover;
+        object-position: center;
+        margin: 0 auto;
+
+    }
+}
+
+/*------------- Estilo para tablets ou telas menores que 1024 pixels --------------*/
+@media (max-width: 1024px) and (min-width: 769px){
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 4vw;
+            max-width: 100%;
+            line-height: 1.5;
+            text-align: left;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-size: 8vw;
+            margin-bottom: 0;
+        }
+
+        #menu ul li {
+            margin-bottom: 10px;
+            font-size: 6vw;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        #menu ul li a, footer ul li a {
+            text-decoration: none;
+        }
+
+        .icons {
+            width: 6%;
+            height: 6%;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0px 0px 30px 0px;
+            font-size: 5vw;
+            border: none;
+            background-color: #ffcc00;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .button {
+            text-align: center;
+            margin: 25px 0;
+        }
+    
+        #imagem_pessoal {
+            width: 40%;
+            height: 40%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            margin: 25px auto;
+            border: 5px solid rgb(243, 198, 0);
+        }
+    
+        .imagem-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        
+        a {
+            color: white;
+        }
+
+        #layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: ;
+            gap: 5vw;        
+    
+        }
+        
+        #layout img {
+            width: 80%;
+            object-fit: cover;
+            object-position: center;
+            margin: 0 auto;
+
+        }
+    }
+
+/*------------- Estilo para desktop ou telas maiores que 1025 pixels --------------*/
+@media (min-width: 1025px) {
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.5;
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+            "nav section footer";
+        margin: 100px 20px;
+    }
+
+    #menu ul li a, footer ul li a {
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline solid rgb(243, 198, 0) 2px;  
+    }
+
+    .icons {
+        width: 6%;
+        height: 6%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 0px 0px 30px 0px;
+        font-size: 20px;
+        border: none;
+        background-color: #ffcc00;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .button {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    button:hover {
+        background-color:rgb(36, 36, 36);
+        color: #ffcc00;
+        padding: 15px 25px;
+        font-size: 21px;
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 0;
+    }
+
+    #imagem_pessoal {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 5px solid rgb(243, 198, 0);
+    }
+
+    #imagem_pessoal:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    
+
+    .imagem-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        color: white;
+        transition: 0.3s;
+    }
+
+    a:hover {
+        color:rgb(243, 198, 0);
+    }
+
+    nav, footer {
+        width: 100%;
+    }
+
+    #hobbies_interesses {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #layout {
+        display: grid;
+        grid-template-columns: 19vw 19vw 19vw;
+        grid-template-rows: 19vw 19vw 19vw;
+        gap: 10px
+    }
+    
+    #layout img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #layout img:hover {
+        transform: scale(1.1);
+        transition: 0.1s;
+    }
+}
